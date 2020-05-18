@@ -1,29 +1,47 @@
 package virtual_pet;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class VirtualPet {
-//   void tick(){
+    Random random = new Random();
 
-    public int headPet;
-    public int buttPet;
-    public int giveTreat;
-    public int scoopPoop;
+        static void petLevels(){
+            System.out.println("Head Pets: " + headPet);
+            System.out.println("Butt Pets: " + buttPet);
+            System.out.println("Give Treats: " + giveTreat);
+            System.out.println("Scoop Poop: " + scoopPoop);
+        }
 
-    public VirtualPet (int headPet, int buttPet, int giveTreat, int scoopPoop){
-        this.headPet = headPet;
-        this.buttPet = buttPet;
-        this.giveTreat = giveTreat;
-        this.scoopPoop = scoopPoop;
-    }
+            public static int headPet;
+            public static int buttPet;
+            public static int giveTreat;
+            public static int scoopPoop;
 
-    public int giveHeadPet(){return headPet;}
 
-    public int giveButtPet(){return buttPet;}
+        public VirtualPet(){
+            headPet = random.nextInt(50);
+            buttPet = random.nextInt(50);
+            giveTreat = random.nextInt(50);
+            scoopPoop = random.nextInt(50);
 
-    public int giveTreat(){return giveTreat;}
 
-    public int scoopPoop(){return scoopPoop;}
+        }
+    public static int giveHeadPet(){return headPet;}
+
+    public static int giveButtPet(){return buttPet;}
+
+    public static int giveTreat(){return giveTreat;}
+
+    public static int scoopPoop(){return scoopPoop;}
+
+    public static int newHeadPet(){return headPet;}
+
+    public static int newButtPet(){return buttPet;}
+
+    public static int newGiveTreat(){return giveTreat;}
+
+    public static int newScoopPoop(){return scoopPoop;}
+
 
 
 
