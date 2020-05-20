@@ -9,7 +9,6 @@ public class VirtualPetApplication<userSelection> {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-
         VirtualPet scullyTheCat = new VirtualPet();
 
         System.out.println("Welcome to your Virtual Pet.");
@@ -19,7 +18,13 @@ public class VirtualPetApplication<userSelection> {
         System.out.println("Press ENTER to Start.");
         input.nextLine();
 
-        VirtualPet.petLevels();
+        VirtualPet petLevels = new VirtualPet();
+
+        System.out.println("Head Pets: " + scullyTheCat.headPet);
+        System.out.println("Butt Pets: " + scullyTheCat.buttPet);
+        System.out.println("Give Treats: " + scullyTheCat.giveTreat);
+        System.out.println("Scoop Poop: " + scullyTheCat.scoopPoop);
+
 
         boolean gameLoop = true;
         while (gameLoop) {
@@ -40,28 +45,28 @@ public class VirtualPetApplication<userSelection> {
 
             if (userSelection == 1)
                 System.out.println("≧◔◡◔≦ thanks for the head pets! :D");
-                int giveHeadPet = VirtualPet.giveHeadPet();
+
 
             if (userSelection == 2)
                 System.out.println("^ↀᴥↀ^ those were some great butt pets!");
-                int giveButtPet = VirtualPet.giveButtPet();
 
 
             if (userSelection == 3)
                 System.out.println("yummy! ♥‿♥ i love treats!");
-                int giveTreat = VirtualPet.giveTreat();
+
 
             if (userSelection == 4)
                 System.out.println("♥ thank you ♥");
-                int scoopPoop = VirtualPet.scoopPoop();
+
 
             if (userSelection == 5)
                 System.out.println("so sad to see you go! (◕︵◕)");
+            return;
+//
+//                }
+
 
         }
-
-
-        }
-
-
     }
+
+}
